@@ -6,6 +6,29 @@ $darkshade5: #f2f3f5;
 $purple: #bc9cfe;
 $green: #71cf97;
 
+@mixin h1 {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29,26px;
+}
+
+@mixin h2 {
+    font-size: 19px;
+    Line-height: 24px ;  
+}
+
+@mixin h3 {
+    font-size: 12px;
+    Line-height: 14,63px; 
+}
+
+@mixin body {
+    font-weight: 400;
+    font-size: 14px;
+    Line-height: 24px;  
+}
+
+
 @font-face {
 	font-family: 'Conv_Montserrat-Bold';
 	src: url('fonts/Montserrat-Bold.eot');
@@ -103,6 +126,27 @@ body {
     font-weight: 700;
     list-style: none;
     padding-left: 0.5em;
+    
+    }    
+    .Hf {   
+            margin-top: -0.1em;
+            @include h1();
+        }
+
+          
+    .Hs {
+            margin-top: 1.35em;
+            @include h2();
+        }
+    .Ht {
+            margin-top: 3em;
+            @include h3();
+            
+        }
+    .body {
+            @include body();
+            margin-top: 1.7em;
+    }
     .title {
         color: #C7C7CF;
         font-weight: 400;
@@ -112,27 +156,6 @@ body {
     }    
     .title.body{
         margin-left: -0.6em;
-    }    
-    .Hf {   margin-top: -0.1em;
-            font-size: 24px;
-            Line-height: 29,26px ;  
-        }
-    .Hs {
-            margin-top: 1.35em;
-            font-size: 19px;
-            Line-height: 24px ;  
-        }
-    .Ht {
-            margin-top: 3em;
-            font-size: 12px;
-            Line-height: 14,63px ;  
-        }
-    .body {
-            margin-top: 1.7em;
-            font-weight: 400;
-            font-size: 14px;
-            Line-height: 24px;  
-    }
 }
 
 
