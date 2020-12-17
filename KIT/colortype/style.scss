@@ -1,56 +1,77 @@
 body {
-    position: relative;
     min-width: 320;
     max-width: 1920;
 }
 
-@mixin square() {
-    width: 4.35rem;
-    height: 4.4rem;
-    border-radius: 0.37rem;
-    margin-top: 28.5%;
+.icon {
+    margin: 1.6% 0 0 1.15%;
 }
 
-.icon {
-    position: absolute;
-    margin: 1.6% 0 0 1.6%;
+$darkshade100:#1F2041;
+$darkshade75: #575871;
+$darkshade50:#8F91A0;
+$darkshade25:#C7C7CF;
+$darkshade5: #f2f3f5;
+$purple: #bc9cfe;
+$green: #71cf97;
+
+@mixin square() {
+    width: 97.5%;
+    height: 99%;
+    border-radius: 0.35em;
 }
+
+
 
 .colors {
-    margin: 7.6% 0 0 7.9%;
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-        .colors_first {
-        @include square();
-        background-color: #202042;
-        margin-top: 0;
-        }
-        .colors_second {
-        @include square();
-        background-color: #585872;
-        }
+  margin: 3.3% 0 0 7.45%;
+  display: grid;   
+  width: 15.1%;
+  height: 38em;
+  border: 1px solid black;
+  grid-template-columns: 25% 75%;
+  grid-template-rows: repeat(7, 1fr);
+  justify-items: left;  
+  gap: 3.2%;   
+    .first {
+       @include square();
+       background-color: $darkshade100;  
+    }
 
-        .colors_third {
-        @include square();
-        background-color: #8f91a0;
-        }
+    .description-first {
+       padding: 2%; 
+    }
 
-        .colors_four {
-            @include square();
-            background-color:#c7c7cf;
-            }
-            .colors_five {
-                @include square();
-                background-color: #f3f4f6;
-                }
-                .colors_six {
-                    @include square();
-                    background-color:#bc9cff;
-                    }
-                    .colors_seven {
-                        @include square();
-                        background-color: #70cf97;
-                        }              
+    .second {
+        @include square();
+        background-color: $darkshade75;
+    }
+
+    .third {
+        @include square();
+        background-color: $darkshade50;
+    }
+
+    .four {
+        @include square();
+        background-color: $darkshade25;
+    }
+
+    .five {
+        @include square();
+        background-color: $darkshade5;
+    }
+
+    .six {
+        @include square();
+        background-color: $purple;
+    }
+
+    .seven {
+        @include square();
+        background-color: $green;
+    }
 }
+
+
 
