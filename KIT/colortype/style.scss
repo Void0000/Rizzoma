@@ -1,13 +1,56 @@
 body {
-    width: 1440px;
-    height: 900px;
     position: relative;
     min-width: 320;
     max-width: 1920;
 }
 
+@mixin square() {
+    width: 4.35rem;
+    height: 4.4rem;
+    border-radius: 0.37rem;
+    margin-top: 28.5%;
+}
+
 .icon {
     position: absolute;
-    margin: 2.1% 0 0 2.1%;
+    margin: 1.6% 0 0 1.6%;
+}
+
+.colors {
+    margin: 7.6% 0 0 7.9%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+        .colors_first {
+        @include square();
+        background-color: #202042;
+        margin-top: 0;
+        }
+        .colors_second {
+        @include square();
+        background-color: #585872;
+        }
+
+        .colors_third {
+        @include square();
+        background-color: #8f91a0;
+        }
+
+        .colors_four {
+            @include square();
+            background-color:#c7c7cf;
+            }
+            .colors_five {
+                @include square();
+                background-color: #f3f4f6;
+                }
+                .colors_six {
+                    @include square();
+                    background-color:#bc9cff;
+                    }
+                    .colors_seven {
+                        @include square();
+                        background-color: #70cf97;
+                        }              
 }
 
