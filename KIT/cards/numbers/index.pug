@@ -6,16 +6,20 @@ head
   title "Cards"
   script(src='/index.js')
 
-body 	
-  .numbers  
-    p.head Найдём номера под <br> ваши пожелания
-    p.arriving ПРИБЫТИЕ     
-      span.out ВЫЕЗД
-    .datearr 
-      span.arr ДД.ММ.ГГГГ
-    .dateout 
-      span.arr ДД.ММ.ГГГГ
-    
-    
- 
-  
+body
+    .numbers  
+      .title 
+        p Найдём номера под <br> ваши пожелания
+      .date_choosing 
+        span ПРИБЫТИЕ
+        span.out ВЫЕЗД <br>
+        select(name='datearriving')
+          option  ДД.ММ.ГГГГ 
+        select(name='dateout' )
+          option ДД.ММ.ГГГГ
+      .guests
+        span ГОСТИ <br>
+        select(name='guestscount')
+          option Сколько гостей
+      .button 
+        input(type="button", value="ПОДОБРАТЬ НОМЕР")

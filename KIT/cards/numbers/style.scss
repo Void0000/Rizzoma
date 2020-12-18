@@ -8,7 +8,7 @@ $green: #71cf97;
 
 @mixin h1 {
     font-weight: bold;
-    font-size: 24px;
+    font-size: 150%;
     line-height: 29px;
 }
 
@@ -20,13 +20,15 @@ $green: #71cf97;
 
 @mixin h3 {
     font-weight: bold;
-    font-size: 12px;
+    font-size: 75%;
     Line-height: 14,63px; 
 }
 
 @mixin body {
+    color: $darkshade75;
+    
     font-weight: 400;
-    font-size: 14px;
+    font-size: 120%;
     Line-height: 24px;  
 }
 
@@ -48,60 +50,92 @@ $green: #71cf97;
     color: $darkshade100;
 }
 
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
 body {
-    min-width: 320;
-    max-width: 1920;
+    box-sizing: border-box;
+    min-width: 320px;
+    max-width: 1920px;
     font-family: "Montserrat";
     font-style: normal;
     color: #1F2041;
     background-color: #f4f4f6;
-    height: 1350px;
-    display: flex;
-    flex-direction: row; 
+}
+
+select {
+    background: url('/expand_more-white-24dp.png') no-repeat 91.5%;
+    background-size: 15.5%;
+    border-radius: 4px;
+    border-color: $darkshade25;
+    @include body();
+    appearance: none; 
 }
 
 .numbers {
-    border-radius: 5px;
-    margin: 8.95rem 0 0 8.3rem;
-    width: 20%;
-    height: 27.5%;
-    background-color: white;
-        .head {
+    box-shadow: 0 0 0.8rem 0.05rem $darkshade25;
+    overflow: hidden;
+    margin: 7.9% 0 0 7.4%;
+    width: 19.85%;
+    background-color: white;      
+        .title {
             @include h1();
-            margin: 1.6em 0 0 1.2em;
+            padding: 10.5% 0 0 7.7%;
         }
-        .arriving { 
-            @include h3();
-            margin: 1.9em 0 0 2.45em;
-                .out {
-                    margin-left: 7.6em;
-                }
+    .date_choosing {
+        position: relative;
+        @include h3();
+        margin: 6% 0 0 7.5%;
+        .out {
+            padding-left: 27.5%;
         }
 
-        .datearr {
-            @include body();
-            margin: 0.4em 0 0 2.1em;
-            height: 3em;
-            width: 10.55em;
-            border-radius: 4px;
-            border: solid 1px $darkshade25;
-            position: relative;
-                .arr {
-                    position: absolute;
-                    margin: 0.5em 0 0 1em;
-                }
-        }
-        .dateout {
-                @include body();
-                margin: -3.15em 0 0 14.15em;
-                height: 3em;
-                width: 10.55em;
-                border-radius: 4px;
-                border: solid 1px $darkshade25;
-                position: relative;
-                .arr {
-                    position: absolute;
-                    margin: 0.5em 0 0 1em;
-                }
-        }
+    
+    [name="datearriving"] {       
+        margin: 1.5% 0 0 0;
+        padding: 2% 14.5% 3.2% 4.5%;
     }
+    [name="dateout"] {
+        margin: 1.5% 0 0 6%;
+        padding: 2% 14% 3.2% 4.5%;
+    }
+    } 
+    .guests {
+        @include h3;
+        margin: 5.5% 0 0 7.5%;
+    }    
+        
+    [name='guestscount'] {
+    letter-spacing: 0.05rem;
+    margin: 1.5% 0 0 0;
+    padding: 2.2% 55% 3.2% 3.9%;
+    background: url('/expand_more-white-24dp.png') no-repeat 96.9%;
+    background-size: 8%;
+    }
+    .button {
+        margin: 3% 0 0 3%;
+        padding: 5% 14% 8% 4.5%;
+        
+        [type='button'] {
+            @include h3;
+            color: white;
+            background: linear-gradient( #b79dfe, #95a3fb);
+         
+            letter-spacing: 0.05rem;
+            border-style: none;
+            border-radius: 50px;
+            padding: 5.5% 32.5% 5% 30%;
+        }   
+    } 
+    .button::after {
+        content:  url('/arrow_forward-white-24dp.svg') !important;
+        position: relative;
+        padding: 50% 0 0 0;
+    }
+}
+
