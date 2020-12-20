@@ -12,7 +12,7 @@ body
         p Найдём номера под <br> ваши пожелания
       .date_choosing 
         span ПРИБЫТИЕ
-        span.out ВЫЕЗД <br>
+        span.out ВЫЕЗД <br> 
         select(name='datearriving')
           option  ДД.ММ.ГГГГ 
         select(name='dateout' )
@@ -20,6 +20,19 @@ body
       .guests
         span ГОСТИ <br>
         select(name='guestscount')
-          option Сколько гостей
-      .button 
-        input(type="button", value="ПОДОБРАТЬ НОМЕР")
+          option(selected="true" disabled="disabled" value="title") Сколько гостей
+          option(value="1guest") 1 гость
+          option(value="2guest") 2 гостя
+          option(value="3guest") 3 гостя
+          option(value="4guest") 4 гостя
+          option(value="5guest") 5 гостей
+      .button
+        button.pay ПОДОБРАТЬ НОМЕР
+            span.arrow 
+              
+          
+    
+     
+
+
+        

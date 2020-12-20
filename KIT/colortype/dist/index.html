@@ -1,0 +1,159 @@
+<!DOCTYPE html><head><meta charset="utf-8"><style>$darkshade100:#1F2041;
+$darkshade75: #575871;
+$darkshade50:#8F91A0;
+$darkshade25:#C7C7CF;
+$darkshade5: #f2f3f5;
+$purple: #bc9cfe;
+$green: #71cf97;
+
+@mixin h1 {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29,26px;
+}
+
+@mixin h2 {
+    font-size: 19px;
+    Line-height: 24px ;  
+}
+
+@mixin h3 {
+    font-size: 12px;
+    Line-height: 14,63px; 
+}
+
+@mixin body {
+    font-weight: 400;
+    font-size: 14px;
+    Line-height: 24px;  
+}
+
+
+@font-face {
+	font-family: 'Conv_Montserrat-Bold';
+	src: url('/Montserrat-Bold.70d570c7.eot');
+	src: local('☺'), url('/Montserrat-Bold.73e94c2c.woff') format('woff'), url('/Montserrat-Bold.f3410305.ttf') format('truetype'), url('/Montserrat-Bold.0fff2121.svg') format('svg');
+	font-weight: normal;
+    font-style: normal;
+    color: $darkshade100;
+}
+
+@font-face {
+	font-family: 'Conv_Montserrat-Regular';
+	src: url('/Montserrat-Regular.21b801b8.eot');
+	src: local('☺'), url('/Montserrat-Regular.1b35f2ae.woff') format('woff'), url('/Montserrat-Regular.44e710c1.ttf') format('truetype'), url('/Montserrat-Regular.6f6bdac5.svg') format('svg');
+	font-weight: normal;
+    font-style: normal;
+    color: $darkshade100;
+}
+
+@mixin square() {
+    width: 4.37rem;
+    height: 4.37rem;
+    border-radius: 0.35em;
+}
+
+@mixin text {
+    padding: 0.45rem 0 0 1.95rem; 
+}
+
+body {
+    min-width: 320;
+    max-width: 1920;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-size: 19px;
+    line-height: 28px;
+    color: #1F2041;
+}
+
+.icon {
+    margin: 1.6% 0 0 1.15%;
+}
+
+.colors {
+  margin: 3.1% 0 0 5.35%;
+  display: grid;   
+  max-width: 18rem;
+  height: 32.15em;
+  grid-template: repeat(7, 1fr) / 1fr 3fr;
+  gap: 3.2%;   
+  list-style: none;
+    .color {
+        @include square();
+    }
+    
+    .description {
+        @include text();
+    }
+
+    .first {
+        background-color: $darkshade100;  
+    }
+
+    .second {
+        background-color: $darkshade75;
+    }
+ 
+    .third {
+        background-color: $darkshade50;
+    }
+ 
+    .four {
+        background-color: $darkshade25;
+    }
+
+    .five {
+        background-color: $darkshade5;
+    }
+    
+    .six {
+        background-color: $purple;
+    }
+ 
+    .seven {
+        background-color: $green;
+    }
+}    
+
+.heads {
+    display: grid;
+    grid-template: repeat(4, 1fr) / 1fr 6.7fr;
+    width: 30em;
+    height: 17em;
+    border: solid 0.1px white;
+    margin: -32em 0 0 44.1em;
+    font-weight: 700;
+    list-style: none;
+    padding-left: 0.5em;
+    
+    }    
+    .Hf {   
+            margin-top: -0.1em;
+            @include h1();
+        }
+
+          
+    .Hs {
+            margin-top: 1.35em;
+            @include h2();
+        }
+    .Ht {
+            margin-top: 3em;
+            @include h3();
+            
+        }
+    .body {
+            @include body();
+            margin-top: 1.7em;
+    }
+    .title {
+        color: #C7C7CF;
+        font-weight: 400;
+        }
+    .title.Ht{
+        margin-left: 0.9em;
+    }    
+    .title.body{
+        margin-left: -0.6em;
+}</style><title>"Colors & Type"</title><script src="/colortype.e31bb0bc.js"></script><link rel="stylesheet" href="/colortype.e31bb0bc.css"></head><body>	<div class="icon"> <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M23.9989 32.4712C23.2224 32.4712 22.5871 31.8359 22.5871 31.0594C22.5871 25.6241 18.14 21.177 12.7047 21.177C11.9283 21.177 11.293 20.5418 11.293 19.7653C11.293 18.9888 11.9283 18.3535 12.7047 18.3535C19.7283 18.3535 25.4106 24.0359 25.4106 31.0594C25.4106 31.8359 24.7753 32.4712 23.9989 32.4712Z" fill="#1F2041" fill-opacity="0.25"></path><path d="M36.7068 19.7653C36.7068 20.5418 36.0715 21.177 35.295 21.177C31.9421 21.177 28.9421 22.8712 27.1774 25.4476C26.7892 24.4594 26.3303 23.5418 25.7656 22.6947C28.095 20.0123 31.5186 18.3535 35.295 18.3535C36.0715 18.3535 36.7068 18.9888 36.7068 19.7653Z" fill="#1F2041" fill-opacity="0.25"></path><path d="M24 48C10.7647 48 0 37.2353 0 24C0 10.7647 10.7647 0 24 0C37.2353 0 48 10.7647 48 24C48 37.2353 37.2353 48 24 48ZM24 2.82353C12.3176 2.82353 2.82353 12.3176 2.82353 24C2.82353 35.6824 12.3176 45.1765 24 45.1765C35.6824 45.1765 45.1765 35.6824 45.1765 24C45.1765 12.3176 35.6824 2.82353 24 2.82353Z" fill="#1F2041" fill-opacity="0.25"></path></svg></div><main><ul class="colors"><li class="color first">  </li><li class="description"><b>Dark Shade 100%</b> <br> #1F2041               </li><li class="color second"> </li><li class="description"><b>Dark Shade 75%</b> <br> #1F2041</li><li class="color third"></li><li class="description"><b>Dark Shade 50%</b> <br> #1F2041</li><li class="color four"> </li><li class="description"><b>Dark Shade 25%</b> <br> #1F2041</li><li class="color five"></li><li class="description"><b>Dark Shade 5%</b> <br> #1F2041</li><li class="color six"></li><li class="description"><b>Purple</b> <br> #BC9CFF</li><li class="color seven"></li><li class="description"><b>Green</b> <br> #6FCF97</li></ul><ul class="heads"><li class="title Hf">H1  </li><li class="Hf">This one is the sub-section or <br>widget title</li><li class="title Hs">H2 </li><li class="Hs">Next one is the item title inside <br>widgets</li><li class="title Ht">H3 </li><li class="Ht">THIS IS A LABEL OR CTA TEXT</li><li class="title body">Body  </li><li class="body">This is the body text which is used for most <br> of the design, like paragraphs, lists, etc.</li></ul></main></body>

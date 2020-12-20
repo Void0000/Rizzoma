@@ -1,0 +1,135 @@
+<!DOCTYPE html><head><meta charset="utf-8"><style>$darkshade100:#1F2041;
+$darkshade75: #575871;
+$darkshade50:#8F91A0;
+$darkshade25:#C7C7CF;
+$darkshade5: #f2f3f5;
+$purple: #bc9cfe;
+$green: #71cf97;
+
+@mixin h1 {
+    font-weight: bold;
+    font-size: 150%;
+    line-height: 29px;
+}
+
+@mixin h2 {
+    font-weight: bold;
+    font-size: 19px;
+    Line-height: 24px ;  
+}
+
+@mixin h3 {
+    font-weight: bold;
+    font-size: 75%;
+    Line-height: 14,63px; 
+}
+
+@mixin body {
+    color: $darkshade75;
+    font-weight: 400;
+    font-size: 120%;
+    Line-height: 24px;  
+}
+
+@font-face {
+	font-family: 'Conv_Montserrat-Bold';
+	src: url('/Montserrat-Bold.95dad56f.eot');
+	src: local('☺'), url('/Montserrat-Bold.bcf9da00.woff') format('woff'), url('/Montserrat-Bold.c9291943.ttf') format('truetype'), url('/Montserrat-Bold.3abdf568.svg') format('svg');
+	font-weight: normal;
+    font-style: normal;
+    color: $darkshade100;
+}
+
+@font-face {
+	font-family: 'Conv_Montserrat-Regular';
+	src: url('/Montserrat-Regular.a17917fb.eot');
+	src: local('☺'), url('/Montserrat-Regular.60e1e68c.woff') format('woff'), url('/Montserrat-Regular.a3c472f1.ttf') format('truetype'), url('/Montserrat-Regular.279e54a3.svg') format('svg');
+	font-weight: normal;
+    font-style: normal;
+    color: $darkshade100;
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body {
+    box-sizing: border-box;
+    min-width: 320px;
+    max-width: 1920px;
+    font-family: "Montserrat";
+    font-style: normal;
+    color: #1F2041;
+    background-color: #f4f4f6;
+}
+
+select {
+    background: url('/expand_more-white-24dp.57427494.png') no-repeat 91.5%;
+    background-size: 15.5%;
+    border-radius: 4px;
+    border-color: $darkshade25;
+    @include body();
+    appearance: none; 
+}
+
+.numbers {
+    box-shadow: 0 0 0.8rem 0.05rem $darkshade25;
+    overflow: hidden;
+    margin: 7.9% 0 0 7.4%;
+    width: 19.85%;
+    background-color: white;      
+        .title {
+            @include h1();
+            padding: 10.5% 0 0 7.7%;
+        }
+    .date_choosing {
+        position: relative;
+        @include h3();
+        margin: 6% 0 0 7.5%;
+        .out {
+            padding-left: 27.5%;
+        }
+
+    
+    [name="datearriving"] {       
+        margin: 1.5% 0 0 0;
+        padding: 2% 14.5% 3.2% 4.5%;
+    }
+    [name="dateout"] {
+        margin: 1.5% 0 0 6%;
+        padding: 2% 14% 3.2% 4.5%;
+    }
+    } 
+    .guests {
+        @include h3;
+        margin: 5.5% 0 0 7.5%;
+    }    
+        
+    [name='guestscount'] {
+    letter-spacing: 0.05rem;
+    margin: 1.5% 0 0 0;
+    padding: 2.2% 55% 3.2% 3.9%;
+    background: url('/expand_more-white-24dp.57427494.png') no-repeat 96.9%;
+    background-size: 8%;
+    }
+}
+
+.button {
+    margin: 3% 0 0 3%;
+    padding: 5% 14% 8% 4.5%;
+   
+    .pay {
+        background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+        border-radius: 22px;
+        border-style: none;
+        @include h3()
+        padding: 5.5% 30% 5% 20%;
+        
+    }
+
+
+}</style><title>"Cards"</title><script src="/numbers.e31bb0bc.js"></script><link rel="stylesheet" href="/numbers.e31bb0bc.css"></head><body><div class="numbers"> <div class="title"> <p>Найдём номера под <br> ваши пожелания</p></div><div class="date_choosing"> <span>ПРИБЫТИЕ</span><span class="out">ВЫЕЗД <br> </span><select name="datearriving"><option> ДД.ММ.ГГГГ </option></select><select name="dateout"><option>ДД.ММ.ГГГГ</option></select></div><div class="guests"><span>ГОСТИ <br></span><select name="guestscount"><option selected="true" disabled="disabled" value="title">Сколько гостей</option><option value="1guest">1 гость</option><option value="2guest">2 гостя</option><option value="3guest">3 гостя</option><option value="4guest">4 гостя</option><option value="5guest">5 гостей</option></select></div><div class="button"><button class="pay">ПОДОБРАТЬ НОМЕР<span class="arrow"> </span></button></div></div></body>
