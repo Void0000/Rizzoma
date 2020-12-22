@@ -38,6 +38,7 @@
   "dependencies": {
     "browser-sync-webpack-plugin": "^2.2.2",
     "file-loader": "^6.2.0",
+    "jquery": "^3.5.1",
     "live-server": "^1.2.1",
     "npm-check-updates": "^9.0.4",
     "webpack": "4.44.2",
