@@ -1,3 +1,7 @@
-.htaccess
-docs/
 node_modules/
+dist/
+yarn.lock
+public/
+.env*
+!.env.example
+package-lock.json

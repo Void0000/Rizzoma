@@ -1,0 +1,9 @@
+{
+  "parserOptions": {
+    "sourceType": "module"
+  },
+  "plugins": [
+    "typescript"
+  ],
+  "extends": "eslint-config-und"
+}
