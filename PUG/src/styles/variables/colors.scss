@@ -23,14 +23,14 @@ $green: #71cf97;
 @mixin h3 {
     color: $darkshade100;
     font-weight: bold;
-    font-size: 0.75rem;
+    font-size: 75%;
     Line-height: 14,63px; 
 }
 
 @mixin body {
     color: $darkshade25;
     font-weight: 400;
-    font-size: 0.78rem;
+    font-size: 105%;
     letter-spacing: 0rem;  
    
 }

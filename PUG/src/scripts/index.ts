@@ -1,4 +1,6 @@
 import './../styles/main.scss';
+
+
 //import { showMenu } from './menu';
 
 //showMenu();
@@ -7,8 +9,12 @@ import './../styles/main.scss';
   //alert('he paragraph was clicked.');
 //});
 
-//jQuery(document).ready(function($){
+   jQuery(document).ready(function($){
 
-////	$('.date').mask('00/00/0000');
+       $('#dd').inputmask('mmddyyyy');
+       
+	
 
-//});
+  });
+
+  
