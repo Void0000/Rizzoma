@@ -159,7 +159,7 @@ body {
 
 .filter-date-dropdown {
     @include h3();
-    margin-top: 12%;
+    margin-top: 2.1vw;
    
     [name=date-filter] {
         margin-top: 0.3vw;
@@ -182,7 +182,7 @@ body {
 .subscription-text-field{
    
     @include h3();
-    margin-top: 12%;
+    margin-top: 2.1vw;
    
     [name=sub-text-field] {
         position: relative;
@@ -227,7 +227,7 @@ body {
      :focus::placeholder {
              color:    $darkshade50;
      } 
-}
+};
 
 
 
@@ -239,17 +239,18 @@ body {
 /*------------------------------------------------------------------------------*/
 /*small buttons */
 .small-buttons {
-    width: 16.8vw;
+    width: 20vw;
     margin: 22% 0 0 -2.5vw;
     
     .default {
         @include h3();
    }
 
-   #check1, #check2, #check3  {
-      
+  .check  {
        opacity: 0;
        position: absolute;
+       display: inline-block;
+       width: 10vw;
    }
    
    .ul-checkbox {
@@ -259,44 +260,70 @@ body {
    }
 
    .li-checkbox {
-       margin-bottom: 0.5vw;
-
+      margin-bottom: 0.25vw;
    }
 
     .container {
         position: relative;
-        display: block;
+        display: inline-block;
         border: solid 1px $darkshade25;
         border-radius: 4px;
         width: 1.05vw;
         height: 1.05vw;
-        
     }
 
-    #check1:checked ~ .checkbox-buttons {
-        border: solid 1px $purple;
+    .containerChecked {
+        border: solid 1px #BC9CFF;;
+        background:url('./images/vector.jpg') no-repeat center;
     }
-    
-    #check2:checked ~ .checkbox-buttons {
-        border: solid 1px $purple;   
-     }
-     #check3:checked ~ .checkbox-buttons {
-        border: solid 1px $purple;     
-      }
-           
+
     .checkbox-buttons {
-        margin: -0.02vw 0 0 -0.1vw;
-        width: 1vw;
-        height: 1vw;
-        display: block; 
+        display: inline-block;
         position: absolute;
-        border-radius: 4px;
-        width: 1vw;
-        height: 1vw;
-        margin-left: 0vw;
+        @include body();
+        margin: 0vw  0 0 0.7vw;
+        padding-top: 0.05vw;
     }
-    
-       
-   
-   
+ };
+
+
+
+ /*-------------------------------------------------radio-buttons*/
+
+ .radio-buttons {
+    position: relative;
+    width: 20vw;
+    margin: 2.5vw 0 0 0vw;
+    display: inline-block;
+ }
+
+
+
+
+ [type='radio'] {
+     opacity: 0;
+ }
+
+ .containerRadio {
+    border: solid 1px $darkshade25;
+    display: inline-block;
+    border-radius: 50%;
+    height: 1vw;
+    width: 1vw;
+    margin: 0.8vw 0 0 0 ;
+ }
+
+ .containerRadioChecked {
+    border: solid 1px #BC9CFF;
+    background:url('./images/Rectangle 2.1.jpg') no-repeat center;
+ 
+ }
+
+ .radio-button {
+    @include body();
+    margin: 0vw  0 0 0.55vw;
+}
+
+.Women {
+    margin: 0 0 0 1.25vw;
 }

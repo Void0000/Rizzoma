@@ -1,10 +1,6 @@
-
-
 doctype html
 html(lang="pl" dir="ltr" class="index")
     include include-head.pug
-    
-    
 
 
     head
@@ -54,7 +50,7 @@ body
     //masked text field
     .maskedtextfield
       span MASKED TEXT FIELD
-      input( type="text" id="dd" name="date")
+      input( type="text" name="date")
 
     //date dropdown
     .date
@@ -86,16 +82,7 @@ body
 
 
 
-
-
-
-
-
-
-
-
-
-
+    //--------------------------------------------------------------------------------------------------------
 
 
 
@@ -106,17 +93,30 @@ body
      span.default CHECKBOX BUTTONS
      ul.ul-checkbox
         li.li-checkbox
-          label.container(for="check1")
-            input(type="checkbox" id='check1') 
-            span.checkbox-buttons
+          label.container.containerSmoke
+            input.check.Smoke(type="checkbox") 
+          span.checkbox-buttons Можно курить
         li.li-checkbox
-         label.container(for="check2")
-            input(type="checkbox" id='check2') 
-            span.checkbox-buttons
+          label.container.containerPets
+            input.check.Pets(type="checkbox") 
+          span.checkbox-buttons Можно с питомцами
         li.li-checkbox
-         label.container(for="check3")
-            input(type="checkbox" id='check3') 
-            span.checkbox-buttons
+          label.container.containerGuests
+            input.check.Guests(type="checkbox") 
+          span.checkbox-buttons Можно пригласить гостей<br> (до 10 человек)
+                               
+
+     //-------------------------------------------------radio-buttons
+
+     .radio-buttons
+        span.default RADIO BUTTONS
+        .choseRadio
+        label.containerRadio.M
+            input.Man(type="radio") 
+        span.radio-button Мужчина
+        label.containerRadio.Women
+            input.Women(type="radio") 
+        span.radio-button Женщина
       
        
 

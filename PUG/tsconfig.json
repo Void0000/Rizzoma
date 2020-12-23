@@ -13,7 +13,6 @@
   ],
   "types": [
     "jquery",
-    "jquery-mask-plugin",
-    "jquery-inputmask-plugin"
+    "jquery-mask-plugin"
   ]
 }
