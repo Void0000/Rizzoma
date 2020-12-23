@@ -112,15 +112,41 @@ body
         span.default RADIO BUTTONS
         .choseRadio
         label.containerRadio.M
-            input.Man(type="radio") 
+            input.sex.Man(type="radio") 
         span.radio-button Мужчина
         label.containerRadio.Women
-            input.Women(type="radio") 
+            input.sex.Women(type="radio") 
         span.radio-button Женщина
+
+
+        //-------------------------------------------------Toggle
+
       
+       
+     .TOGGLE 
+        .default TOGGLE
+        .toggle-btn.active  
+          input.cb-value(type="checkbox")
+          span.round-btn
+        .text Получать спецпредложения
+        .toggle-btn.active
+          input.cb-value(type="checkbox")
+          span.round-btn
+        .text Получать спецпредложения
        
 
        
+
+        //-------------------------------------------------LIKE BUTTON
+
+
+     .like-buttons 
+      .default LIKE BUTTON
+      .dislike
+        span.countd 2
+      .dislike.likes
+        span.countl 12
+  
 
 
 

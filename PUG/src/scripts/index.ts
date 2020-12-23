@@ -3,11 +3,14 @@ import './../styles/main.scss';
 //showMenu();
 
 
-
+///---------------------------------------------------MASK TEXT FIELD
 
    jQuery(document).ready(function($){
        $('[name=date]').mask('99/99/9999',{placeholder:'ДД.ММ.ГГГГ'} );   
       });
+
+
+//-=---------------------------------CHECKBOX BUTTONS
 
     jQuery(document).ready(function(){
       $('.Smoke').click(function () {
@@ -19,15 +22,44 @@ import './../styles/main.scss';
       });
       });
 
+
+
+      /////////-------------------------------RADIO BUTTONS
+
       jQuery(document).ready(function(){
-        $('.Man').click(function () {
+        $('input[type=radio]').change(function () {
+            $('input[type=radio]').not(this).prop('checked', false);
+        })});
+
+     
+        $('.sex.Man').click(function () {
             $('.containerRadio.M').toggleClass('containerRadioChecked')});
-        $('.Women').click(function () {
-            $('.containerRadio.Women').toggleClass('containerRadioChecked');
-        });
-        });
-      
+
+        $('.sex.Women').click(function () {
+              $('.containerRadio.Women').toggleClass('containerRadioChecked')});
+       
+  
+        
+
+ ///------------------------- TOGGLE
 
 
+        $('.cb-value').click(function() {
+          var mainParent = $(this).parent('.toggle-btn');
+          if($(mainParent).find('input.cb-value').is(':checked')) {
+            $(mainParent).addClass('active');
+            $(this).attr('checked', 'checked');
+          } else {
+            $(mainParent).removeClass('active');
+            $(this).removeAttr('checked');
+          }
+        })
 
+        
    
+
+
+        
+
+        
+  ////--------------------LIKE BUTTONS
