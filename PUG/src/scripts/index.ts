@@ -2,6 +2,11 @@ import './../styles/main.scss';
 //import { showMenu } from './menu';
 //showMenu();
 
+$('.no-border').click(function(){
+  $('.no-border').css('border', 'none')
+});
+
+
 
 ///---------------------------------------------------MASK TEXT FIELD
 
@@ -26,15 +31,11 @@ import './../styles/main.scss';
 
       /////////-------------------------------RADIO BUTTONS
 
-      jQuery(document).ready(function(){
-        $('input[type=radio]').change(function () {
-            $('input[type=radio]').not(this).prop('checked', false);
-        })});
+     
 
      
       
-  
-        
+
 
  ///------------------------- TOGGLE
 
@@ -52,8 +53,6 @@ import './../styles/main.scss';
 
         
    
-
-
         
 
         
@@ -66,13 +65,6 @@ import './../styles/main.scss';
     });
 
     $('.dislike').click(function(){
-      let like = $(this).html();
-      like = like + 1;
+      $('.dislike').val(('.like')+1);
  });
 
- $('.no-border').click(function(){
-  $('.no-border').css('border', 'none')
-});
-
-
- 

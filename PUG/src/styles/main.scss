@@ -39,7 +39,7 @@ body {
 /* text field hover/focus */
 
 .text-hover {
-   margin-top: 3.5%;
+   margin-top: 3.8%;
     @include h3();
     .default {
         @include body();
@@ -47,7 +47,7 @@ body {
         color: $darkshade50;
     }
   [name=Awesome] {
-    margin-top: -0.8vw;
+    margin-top: -0.5vw;
     @include field(); 
     border: solid $darkshade50 1px; 
   }
@@ -60,10 +60,10 @@ body {
 /* Dropdown-main */
 .dropdown-main {
     @include h3();
-    margin-top: 5%;
+    margin-top: 4%;
    
     [name=quests-count] {
-        margin-top: -1vw;
+        margin-top: -0.7vw;
         @include field(); 
         @include body(); 
         appearance: none;
@@ -84,7 +84,7 @@ body {
     margin-top: 5%;
    
     [name=date] {
-        margin-top: -1vw;
+        margin-top: -0.7vw;
         @include field(); 
         @include body(); 
       
@@ -108,7 +108,7 @@ body {
 .date {
     @include h3();
     color: $darkshade100;
-    margin-top: 8%;
+    margin-top: 9%;
    
     .date-dd {
         
@@ -116,7 +116,7 @@ body {
     }
 
     .numbers {
-        padding-left: 2.7vw;
+        padding-left: 3vw;
                 
     }
 
@@ -215,7 +215,7 @@ body {
 /*------------------------------------------------------------------------------*/
 /*small buttons */
 .small-buttons {
-    width: 20vw;
+    width: 15vw;
     margin: 22% 0 0 -2.5vw;
     
     .default {
@@ -264,7 +264,7 @@ body {
  /*-------------------------------------------------radio-buttons*/
  .radio-buttons {
     position: relative;
-    width: 20vw;
+    width: 15vw;
     margin: 1.8vw 0 0 0vw;
     display: inline-block;
     padding-top: 0.6vw;
@@ -312,7 +312,7 @@ body {
 }
   //-------------------------------------------------Toggle
   .TOGGLE {
-    width: 20vw;
+    width: 15vw;
     margin: 2.1vw 0 0 0vw;
  }
 
@@ -320,7 +320,8 @@ body {
     margin: 0.9vw 0 0 0 ;
     width: 2vw;
     height: 1.1vw;
-    border: solid 1px$darkshade25;
+    border: solid 1px #BC9CFF;
+
     border-radius: 50px;
     position: relative;
     cursor: pointer;
@@ -328,14 +329,15 @@ body {
 
   .toggle-btn.active .round-btn {
     left:2vw;
-    margin: 0.2vw 0 0 -0.85vw !important;
+    margin: 0.2vw 0 0 -1.8vw !important;
     width: 0.6vw !important;
     height: 0.6vw !important;
-    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    background: $darkshade25;
   }
 
   .toggle-btn.active {
-    border: solid 1px #BC9CFF;
+    border: solid 1px $darkshade25;
+
   }
 
   .toggle-btn .round-btn {
@@ -351,10 +353,10 @@ body {
   }
 
   .round-btn {
-    margin: 0.2vw 0 0 -0.85vw !important;
+    margin: 0.2vw 0 0 0.15vw !important;
     width: 0.6vw !important;
     height: 0.6vw !important;
-    background: $darkshade25;
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
   }
 
   .toggle-btn .cb-value {
@@ -377,7 +379,7 @@ body {
         //-------------------------------------------------LIKE BUTTON
 
     .like-buttons {
-            width: 20vw;
+            width: 15vw;
             margin: 2vw 0 0 0vw;
          }
         .dislike {
@@ -416,7 +418,7 @@ body {
         //-------------------------------------------------RATE BUTTON
        
         .rate-buttons {
-            width: 20vw;
+            width: 25vw;
             margin: 2.1vw 0 0 0vw;
          }
         
@@ -490,3 +492,18 @@ body {
            display: inline-block;
 
          }
+
+    //-------------------------------------------------RANGE SLIDER
+     
+
+    .third-column {
+        width: 16.8vw;
+        margin: 6.7vw 0 0 -15.2vw;
+    }
+
+
+    // --------------------------------------------
+    
+    .default {
+        @include h3;
+    }
