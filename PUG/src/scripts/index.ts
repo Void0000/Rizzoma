@@ -32,12 +32,7 @@ import './../styles/main.scss';
         })});
 
      
-        $('.sex.Man').click(function () {
-            $('.containerRadio.M').toggleClass('containerRadioChecked')});
-
-        $('.sex.Women').click(function () {
-              $('.containerRadio.Women').toggleClass('containerRadioChecked')});
-       
+      
   
         
 
@@ -63,3 +58,21 @@ import './../styles/main.scss';
 
         
   ////--------------------LIKE BUTTONS
+
+  
+  jQuery(document).ready(function(){
+    $('.dislike').click(function () {
+        $('.dislike').toggleClass('like')});
+    });
+
+    $('.dislike').click(function(){
+      let like = $(this).html();
+      like = like + 1;
+ });
+
+ $('.no-border').click(function(){
+  $('.no-border').css('border', 'none')
+});
+
+
+ 

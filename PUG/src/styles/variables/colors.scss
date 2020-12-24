@@ -36,6 +36,16 @@ $green: #71cf97;
 }
 
 @font-face {
+	font-family: 'Material Icons';
+	src: url('./images/fonts/Montserrat-Bold.eot');
+	src: local('☺'), url('./images/fonts/Montserrat-Bold.woff') format('woff'), url('./images/fonts/Montserrat-Bold.ttf') format('truetype'), url('./images/fonts/Montserrat-Bold.svg') format('svg');
+	font-weight: normal;
+    font-style: normal;
+    color: $darkshade100;
+}
+
+
+@font-face {
 	font-family: 'Conv_Montserrat-Bold';
 	src: url('./images/fonts/Montserrat-Bold.eot');
 	src: local('☺'), url('./images/fonts/Montserrat-Bold.woff') format('woff'), url('./images/fonts/Montserrat-Bold.ttf') format('truetype'), url('./images/fonts/Montserrat-Bold.svg') format('svg');
@@ -86,3 +96,4 @@ body {
     margin: 1.6vw 0 0 1.6vw;
     position: absolute;
 }
+

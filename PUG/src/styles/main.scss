@@ -1,19 +1,15 @@
-
-
 @import './variables/colors';
 
 body {
-
   display: grid;
   grid-template-rows: repeat(3,1fr);
   grid-template-columns: repeat(3, 1fr);
-  
 }
 
 
 .text-field {
-    width: 16.8vw;
-    margin: 22.5% 0 0 22%;
+
+    margin: 22.8% 0 0 22%;
     position: relative;
 }
 /*------------------------------------------------------------------------------*/
@@ -24,20 +20,16 @@ body {
         @include body();
         padding-left: 9.9vw;
     }
-
     [name=Email] {
          @include field(); 
-         margin-top: 0.2vw
+         margin-top: -1vw
     }
-
     [name=Email]::placeholder{
         @include body();    
         } 
-
     [name=Email]:hover, :focus, :active {
         @include hover();
      }
-
     :hover::placeholder,
     :focus::placeholder {
             color:    $darkshade50;
@@ -47,7 +39,7 @@ body {
 /* text field hover/focus */
 
 .text-hover {
-   margin-top: 7%;
+   margin-top: 3.5%;
     @include h3();
     .default {
         @include body();
@@ -55,7 +47,7 @@ body {
         color: $darkshade50;
     }
   [name=Awesome] {
-    margin-top: 0.3vw;
+    margin-top: -0.8vw;
     @include field(); 
     border: solid $darkshade50 1px; 
   }
@@ -64,22 +56,19 @@ body {
       color: $darkshade50;    
     } 
 }
-
 /*------------------------------------------------------------------------------*/
 /* Dropdown-main */
-
 .dropdown-main {
     @include h3();
-    margin-top: 6%;
+    margin-top: 5%;
    
     [name=quests-count] {
-        margin-top: 0.3vw;
+        margin-top: -1vw;
         @include field(); 
         @include body(); 
         appearance: none;
         background: url('./images/expand_more-white-24dp.png') no-repeat 15vw;
         background-size: 1.2vw;
-        
     }
 
     [name=quests-count]:hover, :focus, :active  {
@@ -92,10 +81,10 @@ body {
 
 .maskedtextfield {
     @include h3();
-    margin-top: 6%;
+    margin-top: 5%;
    
     [name=date] {
-        margin-top: 0.3vw;
+        margin-top: -1vw;
         @include field(); 
         @include body(); 
       
@@ -114,16 +103,16 @@ body {
             color:    $darkshade50;
     } 
 }
-
 /*------------------------------------------------------------------------------*/
 /*date dropdown */
 .date {
     @include h3();
-    margin-top: 13%;
+    color: $darkshade100;
+    margin-top: 8%;
    
     .date-dd {
         
-        color: $darkshade50;
+        color: $darkshade100;
     }
 
     .numbers {
@@ -137,7 +126,7 @@ body {
         margin-top: 0.3vw;
         @include field(); 
         @include body(); 
-        width: 8vw;
+        width: 7.8vw;
         appearance: none;
         background: url('./images/expand_more-white-24dp.png') no-repeat 6.1vw;
         background-size: 1.2vw;
@@ -150,26 +139,23 @@ body {
      }
 
          [name=date-numbers] {
-           margin-left: 0.8vw;
+           margin-left: 1.1vw;
      }
 }
 }
-
 /*filter date dropdown */
-
 .filter-date-dropdown {
     @include h3();
-    margin-top: 2.1vw;
+    margin-top: 2.15vw;
    
     [name=date-filter] {
-        margin-top: 0.3vw;
+        margin-top: -1vw;
         @include field(); 
         @include body(); 
         width: 14vw;
         appearance: none;
         background: url('./images/expand_more-white-24dp.png') no-repeat 12.1vw;
-        background-size: 1.2vw;
-        
+        background-size: 1.2vw;  
     }
 
     [name=date-filter]:hover, :focus, :active  {
@@ -182,30 +168,28 @@ body {
 .subscription-text-field{
    
     @include h3();
-    margin-top: 2.1vw;
+    margin-top: 2.3vw;
    
     [name=sub-text-field] {
         position: relative;
-        margin-top: 0.25vw;
+        margin-top: -1vw;
         @include field(); 
         @include body(); 
         width: 14vw;
         appearance: none;
     }
 
-    
-    
     .subarrow {
         background: url('./images/arrow_forward.png') no-repeat 0.1vw;
         background-size: 1.1vw;
         position: absolute;
-        margin:0.5vw 0 0 -1.79vw;
+        margin: -0.55vw 0 0 -1.79vw;
         height: 2vw;
         width: 2vw;
         border: none;
         cursor: pointer;  
         outline: none; 
-   
+
     }
 
     .subarrow:hover, :focus, :active, :visited  {
@@ -228,14 +212,6 @@ body {
              color:    $darkshade50;
      } 
 };
-
-
-
-
-
-
-
-
 /*------------------------------------------------------------------------------*/
 /*small buttons */
 .small-buttons {
@@ -255,8 +231,7 @@ body {
    
    .ul-checkbox {
        margin: 0.9vw 0 0 0;
-       list-style: none;
-
+      list-style: none;
    }
 
    .li-checkbox {
@@ -270,6 +245,7 @@ body {
         border-radius: 4px;
         width: 1.05vw;
         height: 1.05vw;
+        transition: .02s;
     }
 
     .containerChecked {
@@ -285,36 +261,46 @@ body {
         padding-top: 0.05vw;
     }
  };
-
-
  /*-------------------------------------------------radio-buttons*/
-
  .radio-buttons {
     position: relative;
     width: 20vw;
-    margin: 2.5vw 0 0 0vw;
+    margin: 1.8vw 0 0 0vw;
     display: inline-block;
+    padding-top: 0.6vw;
  }
 
- [type='radio'] {
+.choseRadio {
+    margin-top: 0.85vw;
+}
+
+ [name='radio'] {
      opacity: 0;
+     position: absolute;
  }
-
 
  .containerRadio {
-    border: solid 1px $darkshade25;
     display: inline-block;
-    border-radius: 50%;
     height: 1vw;
     width: 1vw;
-    margin: 0.8vw 0 0 0 ;
- }
-
- .containerRadioChecked {
-    border: solid 1px #BC9CFF;
-    background:url('./images/Rectangle 2.1.jpg') no-repeat center;
+    vertical-align: middle;
  
  }
+
+ .fake {
+    display: inline-block ;
+    border: solid 1px $darkshade25;
+    border-radius: 50%;
+    height: 1.05vw;
+    width: 1vw;
+    position: relative;
+ }
+
+.radioB:checked + .fake {
+   
+     border: solid 1px #BC9CFF;
+     background:url('./images/Rectangle 2.1.jpg') no-repeat center;
+}
 
  .radio-button {
     @include body();
@@ -324,10 +310,7 @@ body {
 .Women {
     margin: 0 0 0 1.25vw;
 }
-
-
   //-------------------------------------------------Toggle
-
   .TOGGLE {
     width: 20vw;
     margin: 2.1vw 0 0 0vw;
@@ -341,7 +324,6 @@ body {
     border-radius: 50px;
     position: relative;
     cursor: pointer;
-    
   }
 
   .toggle-btn.active .round-btn {
@@ -365,7 +347,7 @@ body {
     position: absolute;
     left: 1vw;
     margin: -0.3vw 0 0 -1vw;
-    transition: all .06s ease;
+    transition: all .1s ease;
   }
 
   .round-btn {
@@ -373,10 +355,7 @@ body {
     width: 0.6vw !important;
     height: 0.6vw !important;
     background: $darkshade25;
-    
   }
-
-
 
   .toggle-btn .cb-value {
     position: absolute;
@@ -387,9 +366,6 @@ body {
     opacity: 0;
     z-index: 9;
     cursor: pointer;
-    
-    
-    filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
   }
 
   .text {
@@ -402,38 +378,115 @@ body {
 
     .like-buttons {
             width: 20vw;
-            margin: 2.1vw 0 0 0vw;
+            margin: 2vw 0 0 0vw;
          }
-
-
-    .dislike {
+        .dislike {
+        vertical-align: middle;
         display: inline-block;
-        margin: 0.7vw 0 0 0 ;
-        width: 2vw;
+        margin: 0.8vw 0 0 0 ;
+        width: 2.1vw;
+        border: none;
         height: 1.1vw;
-        border: solid 1px $darkshade25;
-        border-radius: 50px;
         position: relative;
         cursor: pointer;
         text-align: right;
-        width: 2.1vw
-
-      }
-
-      .likes {
-        margin: 0.7vw 0 0 0.65vw ;
-        border: none;
-        background:url('./images/Rectangle 2.svg') no-repeat;
-        background-size: 2.1vw;
-      }
-
-      .countd {
-          @include body;
-          padding-right: 0.4vw;
-      }
-
-      .countl {
+        background:url('./images/Group 3.jpg') no-repeat center;
+        background-size: 2vw;
+        transition: 0.2s;
         @include body;
-        padding-right: 0.4vw;
-        color: #BC9CFF;
+        font-size: 0.65vw;
+        padding-right: 0.52vw;
+      }
+
+      .dislike:focus {
+        outline: none;
+      }
+      
+      .like {
+        background:url('./images/Group 2.1.png') no-repeat center;   
+        background-size: 2vw;
+        color:$purple;
+      }
+
+    .liked {
+        display: inline-block;
+        margin-left: 0.4vw;
     }
+
+        //-------------------------------------------------RATE BUTTON
+       
+        .rate-buttons {
+            width: 20vw;
+            margin: 2.1vw 0 0 0vw;
+         }
+        
+         [name='rating'] {
+            margin-right: 0.4vw;
+         }
+         
+         .no-border {
+            margin-top: 0.9vw;
+         }
+         .rating {
+         display: inline-block;
+         }
+
+         .rating-star {
+             width: 1vw;
+             height: 1vw;
+             position: absolute;
+             top: 0;
+             left: 0;
+             appearance: none;
+         }
+         .rating-star:nth-child(1) {
+            width: 1.1vw;
+            z-index: 5;
+         }
+
+         .rating-star:nth-child(2) {
+            width: 2.3vw;
+            z-index: 4;
+         }
+         
+         .rating-star:nth-child(3) {
+            width: 3.6vw;
+            z-index: 3;
+         }
+
+         .rating-star:nth-child(4) {
+            width: 4.8vw;
+            z-index: 2;
+         }
+
+         .rating-star:nth-child(5) {
+            width: 6.3vw;
+            z-index: 1;
+         }
+
+         .rating-star:focus {
+            background-image:url('./images/star.jpg');
+            outline: none;
+            background-size: 1.25vw auto;
+         }
+
+         .rating-star:checked {
+            background-image:url('./images/star.jpg');
+            outline: none;
+            background-size: 1.25vw auto;
+         }
+
+         .rating-group {
+             display: inline-block;
+             position: relative;
+             background-image:url('./images/star_border.jpg');
+             background-size: 1.25vw auto;
+             width: 6.3vw;
+             height: 1.2vw ;
+         }
+
+         .second {
+           margin-left: 1vw;
+           display: inline-block;
+
+         }

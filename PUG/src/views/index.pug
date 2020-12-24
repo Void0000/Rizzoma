@@ -31,32 +31,37 @@ body
         
     //text field textt-default
     .text-default
-      span TEXT FIELD
-      span.default DEFAULT 
-      input(type="text" name="Email" placeholder="Email" )
+     
+      span.no-border TEXT FIELD
+      span.default.no-border DEFAULT 
+      form.no-border
+        input(type="text" name="Email" placeholder="Email" maxlength="30" )
 
     //text field hover/focus
     .text-hover
-      span TEXT FIELD
-      span.default HOVER/FOCUS
-      input( type="text" name="Awesome" placeholder="This is pretty awesome")
+      span.no-border TEXT FIELD
+      span.default.no-border HOVER/FOCUS
+      form.no-border
+         input( type="text" name="Awesome" placeholder="This is pretty awesome" maxlength="30") 
 
     //Dropdown-main
     .dropdown-main
-      span DROPDOWN
-      select(name='quests-count')
-        option Сколько гостей
+      span.no-border DROPDOWN
+      form.no-border
+         select(name='quests-count')
+            option Сколько гостей
     
     //masked text field
     .maskedtextfield
-      span MASKED TEXT FIELD
-      input( type="text" name="date")
+      span.no-border MASKED TEXT FIELD
+      form.no-border
+        input( type="text" name="date")
 
     //date dropdown
     .date
       span.date-dd DATE DROPDOWN
       span.date-dd.numbers DATE DROPDOWN
-      .date-dropdowns
+      form.date-dropdowns
         select(name='date-letter')
           option(selected="true" disabled='disabled') ДД.ММ.ГГГГ
            
@@ -65,18 +70,19 @@ body
 
     //filter date dropdown
     .filter-date-dropdown
-      span FILTER DATE DROPDOWN<br>
-      select(name='date-filter')
-        option 19 авг - 23 авг
+      span.no-border FILTER DATE DROPDOWN<br>
+      form.no-border
+        select(name='date-filter')
+          option 19 авг - 23 авг
 
 
     //subscription text field
     .subscription-text-field
-      span SUBSCRIPTION TEXT FIELD
-      .arrow-button
-      input(type="text" name="sub-text-field" placeholder='Email')
-      span.subarrow
-        button
+      span.no-border SUBSCRIPTION TEXT FIELD
+      form.arrow-button.no-border
+       input(type="text" name="sub-text-field" placeholder='Email' maxlength="28")
+       span.subarrow
+          button
       
         
 
@@ -90,33 +96,36 @@ body
         
   //-------------------------------------------------small-buttons
   .small-buttons
-     span.default CHECKBOX BUTTONS
-     ul.ul-checkbox
-        li.li-checkbox
-          label.container.containerSmoke
-            input.check.Smoke(type="checkbox") 
-          span.checkbox-buttons Можно курить
-        li.li-checkbox
-          label.container.containerPets
-            input.check.Pets(type="checkbox") 
-          span.checkbox-buttons Можно с питомцами
-        li.li-checkbox
-          label.container.containerGuests
-            input.check.Guests(type="checkbox") 
-          span.checkbox-buttons Можно пригласить гостей<br> (до 10 человек)
+     span.default.no-border CHECKBOX BUTTONS
+     form.no-border
+      ul.ul-checkbox
+         li.li-checkbox
+            label.container.containerSmoke
+              input.check.Smoke(type="checkbox") 
+            span.checkbox-buttons Можно курить
+         li.li-checkbox
+            label.container.containerPets
+              input.check.Pets(type="checkbox") 
+            span.checkbox-buttons Можно с питомцами
+         li.li-checkbox
+            label.container.containerGuests
+              input.check.Guests(type="checkbox") 
+            span.checkbox-buttons Можно пригласить гостей<br> (до 10 человек)
                                
 
      //-------------------------------------------------radio-buttons
 
      .radio-buttons
         span.default RADIO BUTTONS
-        .choseRadio
-        label.containerRadio.M
-            input.sex.Man(type="radio") 
-        span.radio-button Мужчина
-        label.containerRadio.Women
-            input.sex.Women(type="radio") 
-        span.radio-button Женщина
+        form.choseRadio
+          label.containerRadio
+             input(type="radio" name="radio" class='radioB' ) 
+             span.fake
+          span.radio-button Мужчина
+          label.containerRadio.Women
+            input(type="radio" name="radio" class='radioB') 
+            span.fake
+          span.radio-button Женщина
 
 
         //-------------------------------------------------Toggle
@@ -125,11 +134,11 @@ body
        
      .TOGGLE 
         .default TOGGLE
-        .toggle-btn.active  
+        form.toggle-btn.active
           input.cb-value(type="checkbox")
           span.round-btn
         .text Получать спецпредложения
-        .toggle-btn.active
+        form.toggle-btn.active
           input.cb-value(type="checkbox")
           span.round-btn
         .text Получать спецпредложения
@@ -141,17 +150,45 @@ body
 
 
      .like-buttons 
-      .default LIKE BUTTON
-      .dislike
-        span.countd 2
-      .dislike.likes
-        span.countl 12
+      .default.no-border LIKE BUTTON
+      .disliked
+      button.dislike 2
+      .liked
+      button.dislike.like  12
+         
+
+
+
+
+
+
+
+
+
+           //-------------------------------------------------RATE BUTTON
+
+
+     .rate-buttons 
+      .default.no-border RATE BUTTON
+      form.no-border.rating
+        .rating-group
+          input(type='radio' class ='rating-star' name='rating' value='1' aria-label='badest')
+          input(type='radio' class ='rating-star' name='rating' value='2' aria-label='bad')
+          input(type='radio' class ='rating-star' name='rating' value='3' aria-label='normal')
+          input(type='radio' class ='rating-star' name='rating' value='4' aria-label='good'  checked)
+          input(type='radio' class ='rating-star' name='rating' value='5' aria-label='best')
+      form.no-border.rating
+        .rating-group.second
+          input(type='radio' class ='rating-star' name='rating' value='1' aria-label='badest' )
+          input(type='radio' class ='rating-star' name='rating' value='2' aria-label='bad')
+          input(type='radio' class ='rating-star' name='rating' value='3' aria-label='normal')
+          input(type='radio' class ='rating-star' name='rating' value='4' aria-label='good')
+          input(type='radio' class ='rating-star' name='rating' value='5' aria-label='best' checked)
+
+
+
+
   
-
-
-
-      
-
 
   
 
