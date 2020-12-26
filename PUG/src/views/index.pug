@@ -152,9 +152,12 @@ body
      .like-buttons 
       .default.no-border LIKE BUTTON
       .disliked
-      button.dislike 2
+      button.dislike 
+        span.count 2
       .liked
-      button.dislike.like  12
+      button.dislikesecond 
+        span.countl 11
+
          
 
 
@@ -196,6 +199,14 @@ body
 .third-column 
    .range-slider
     .default.no-border RANGE SLIDER
+    form.no-border
+    div(id='form')
+      div(id='lower-value') 
+      span.dash -
+      div(id='upper-value')
+      div(id='r-slider')
+    
+
 
 
 

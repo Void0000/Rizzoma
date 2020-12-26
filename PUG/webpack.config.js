@@ -62,7 +62,7 @@ const compileTemplate = (fileName) => {
 
 module.exports = {
   entry:
-    PATHS.src + '/scripts/index.ts'
+    PATHS.src + '/scripts/index.js'
   ,
 
   output: {

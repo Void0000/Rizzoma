@@ -1,5 +1,5 @@
 import './../styles/main.scss';
-import 'nouislider.min.js';
+
 //import { showMenu } from './menu';
 //showMenu();
 
@@ -65,25 +65,75 @@ $('.no-border').click(function(){
         $('.dislike').toggleClass('like')});
     });
 
-    $('.dislike').click(function(){
-      $('.dislike').val(('.like')+1);
- });
+    jQuery(document).ready(function(){
+        $('.dislikesecond').click(function () {
+            $('.dislikesecond').toggleClass('like')});
+        });
+    
 
 
+
+ $(document).ready(function() {
+  $('.dislike').click(function() {
+    let like = parseInt($('.count').html());
+    if ($(this).hasClass("clicked")) {
+      $(this).removeClass("clicked");
+      like--;
+    } else {
+      $(this).addClass("clicked");
+      like++;
+    }
+    $('.count').html(like)
+  });
+});
+
+
+$(document).ready(function() {
+    $('.dislikesecond').click(function() {
+      let dislike = parseInt($('.countl').html());
+      if ($(this).hasClass("clicked")) {
+        $(this).removeClass("clicked");
+        dislike--;
+      } else {
+        $(this).addClass("clicked");
+        dislike++;
+      }
+      $('.countl').html(dislike)
+    });
+  });
 
 // -------------------------------
 
 
 
  jQuery(document).ready(function(){
- var slider = document.getElementById('slider');
+ var nonLinearSlider = document.getElementById('r-slider');
 
-noUiSlider.create(slider, {
-    start: [20, 80],
+noUiSlider.create(nonLinearSlider, {
     connect: true,
+    behaviour: 'tap',
+    step:100,    
+    start: [5000, 10000],
     range: {
-        'min': 0,
-        'max': 100
-    }
+        'min': [0],
+        'max': [15000], },
+
+    format: wNumb({
+            decimals: 0,
+            thousand: ' '
+        })
+    
 })
+
+var nodes = [
+    document.getElementById('lower-value'), // 0
+    document.getElementById('upper-value')  // 1
+];
+
+// Display the slider value and how far the handle moved
+// from the left edge of the slider.
+nonLinearSlider.noUiSlider.on('update', function (values, handle, unencoded, isTap, positions) {
+    nodes[handle].innerHTML = values[handle] + '&#8381';
+
+});
 });

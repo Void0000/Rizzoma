@@ -1,4 +1,6 @@
 @import './variables/colors';
+@import './components/nouislider.min.scss';
+
 
 body {
   display: grid;
@@ -382,7 +384,7 @@ body {
             width: 15vw;
             margin: 2vw 0 0 0vw;
          }
-        .dislike {
+        .dislike, .dislikesecond {
         vertical-align: middle;
         display: inline-block;
         margin: 0.8vw 0 0 0 ;
@@ -400,7 +402,7 @@ body {
         padding-right: 0.52vw;
       }
 
-      .dislike:focus {
+      .dislike:focus, .dislikesecond:focus  {
         outline: none;
       }
       
@@ -408,6 +410,20 @@ body {
         background:url('./images/Group 2.1.png') no-repeat center;   
         background-size: 2vw;
         color:$purple;
+        vertical-align: middle;
+        display: inline-block;
+        margin: 0.8vw 0 0 0 ;
+        width: 2.1vw;
+        border: none;
+        height: 1.1vw;
+        position: relative;
+        cursor: pointer;
+        text-align: right;
+        background-size: 2vw;
+        transition: 0.2s;
+        @include body;
+        font-size: 0.65vw;
+        padding-right: 0.52vw;
       }
 
     .liked {
@@ -503,7 +519,64 @@ body {
 
 
     // --------------------------------------------
-    
+    .range-slider {
+        position: relative;
+        text-align: right
+    }
+
     .default {
         @include h3;
+        text-align: start;
     }
+
+    #form {
+           margin-top: -1.9vw;
+           position: absolute;
+    }
+
+    #r-slider {
+      height: 0.3vw;
+      width: 14vw;
+      margin: 1.2vw 0 0 0;
+    }
+
+    #upper-value, #lower-value {
+        display: inline-block;
+        @include body;
+    }
+
+    #upper-value {
+        margin: 0 0 0 0.1vw;
+
+    }
+    .dash {
+        @include body;
+        margin-left: 0.2vw;    }
+   
+    .noUi-connect {
+        height: 0.3vw;
+
+        background-color: $green;
+    }
+
+    .noUi-horizontal .noUi-handle  {
+        margin-right: 0.5vw;
+        width: 0.8vw;
+        height: 0.8vw;
+        border-radius: 50%;
+        border: 1px solid white;
+        outline: none;
+
+    }
+    .noUi-touch-area {
+        margin-top: 0.05vw;
+        border-radius: 50%;
+        background-color: $green;
+    }  
+
+    .noUi-horizontal .noUi-handle::after, .noUi-horizontal .noUi-handle::before {
+        display: none;
+    }
+     
+    
+
