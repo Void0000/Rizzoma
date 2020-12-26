@@ -1,5 +1,6 @@
 @import './variables/colors';
 @import './components/nouislider.min.scss';
+@import './components/simplePagination.scss';
 
 
 body {
@@ -566,7 +567,6 @@ body {
         border-radius: 50%;
         border: 1px solid white;
         outline: none;
-
     }
     .noUi-touch-area {
         margin-top: 0.05vw;
@@ -623,6 +623,7 @@ body {
         border: none;
         background-color: white;
         background-image:url('./images/Button Default.png');
+        background-size: 5.2vw;
         cursor: pointer;
     }
 
@@ -689,3 +690,24 @@ body {
     }
     
 
+            //-------------------------------------------------BUTTONS
+     
+    
+    .pagination {
+        margin: 2.1vw 0 0 0;
+        width: 20vw;
+    }
+
+    .pages {
+        margin: 0.8vw 0 0 0.1vw;
+    }
+
+    .pagin {
+       margin: 0.4vw 0 0 11vw;
+       color: white;
+      
+    }
+
+    .nextText {
+        color: red;
+    }

@@ -1,0 +1,96 @@
+/**
+* CSS themes for simplePagination.js
+* Author: Flavius Matis - http://flaviusmatis.github.com/
+* URL: https://github.com/flaviusmatis/simplePagination.js
+*/
+
+ul.simple-pagination {
+	list-style: none;
+}
+
+.simple-pagination {
+	display: block;
+	overflow: hidden;
+	padding: 0 5px 5px 0;
+	margin: 0;
+}
+
+.simple-pagination ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.simple-pagination li {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	float: left;
+}
+span.ellipse.clickable {
+	cursor: pointer;
+}
+
+.ellipse input {
+	width: 1em;
+}
+
+
+/*------------------------------------*\
+	Light Theme Styles
+\*------------------------------------*/
+.light-theme span {
+	cursor:pointer;
+}
+
+.light-theme a, .light-theme span {
+    float: left;
+    @include body;
+	text-align: center;
+	border: none;
+	border-radius: 22px;
+	min-width: 14px;
+	padding: 0.7vw;
+    margin: -0.05vw 0.05vw 0 0;
+    text-decoration: none;
+    
+}
+
+.light-theme a:hover, .light-theme li:not(.disabled):not(.active) span:hover {
+	text-decoration: none;
+}
+
+.light-theme .current {
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    vertical-align: middle;
+	color: #FFF;
+    padding: 0.6vw ;
+    width: 2.1vw;
+	cursor: default;
+}
+
+.light-theme .ellipse {
+	background: none;
+	border: none;
+	border-radius: 0;
+	box-shadow: none;
+	font-weight: bold;
+	cursor: default;
+}
+
+.page-link.next {
+    background-image:url('./images/next.png');
+    background-size: 2.23vw;
+    margin: -0.2vw 0 0 0.5vw;
+    width: 2.2vw;
+    color: #6FCF97;
+}
+
+.current.next{
+    background-image:url('./images/next.png');
+    background-size: 2.3vw;
+    width: 2.3vw;
+    margin: -0.2vw 0 0 0vw;
+    padding: 0.7vw;
+    color: #6FCF97;
+}

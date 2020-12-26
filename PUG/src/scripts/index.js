@@ -102,7 +102,7 @@ $(document).ready(function() {
     });
   });
 
-// -------------------------------
+// -------------------------------RANGE LIDER
 
 
 
@@ -136,4 +136,23 @@ nonLinearSlider.noUiSlider.on('update', function (values, handle, unencoded, isT
     nodes[handle].innerHTML = values[handle] + '&#8381';
 
 });
+});
+
+
+// -------------------------------PAGINATION
+
+jQuery(document).ready(function(){
+    $(function() {
+        $('.pages').pagination({
+            items: 15,
+            itemsOnPage: 1,
+            displayedPages: 3,
+            edges: 1,
+            ellipsePageSet: true,
+            cssStyle: 'light-theme',
+            prevText:'',
+            nextText:'`'
+            
+        });
+    });
 });
