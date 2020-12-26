@@ -695,19 +695,18 @@ body {
     
     .pagination {
         margin: 2.1vw 0 0 0;
-        width: 20vw;
     }
 
     .pages {
         margin: 0.8vw 0 0 0.1vw;
+        width: 20vw;
+
     }
 
-    .pagin {
-       margin: 0.4vw 0 0 11vw;
-       color: white;
-      
+    .variables-arend {
+        @include body;
+        clear: both;
+        margin: 3.5vw 0 0 0.5vw;
     }
+  
 
-    .nextText {
-        color: red;
-    }
