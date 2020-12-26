@@ -594,11 +594,12 @@ body {
          width: 5.18vw;
          border-radius: 22px;
          border: none;
+         outline: none;
          background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
          cursor: pointer;
      }
 
-     .click-noactive:focus {
+     .click-noactive:active {
          outline: none;
          opacity: 0.5;
      }
@@ -608,7 +609,7 @@ body {
         margin: -0.1vw 0 0 1vw;
     }
 
-    .click-active:focus {
+    .click-active:active {
         outline: none;
         opacity:1;
     }
@@ -621,6 +622,7 @@ body {
         width: 5.18vw;
         border-radius: 22px;
         border: none;
+        outline: none;
         background-color: white;
         background-image:url('./images/Button Default.png');
         background-size: 5.2vw;
@@ -632,12 +634,12 @@ body {
         background-image:url('./images/Button Hover.png');
     }
 
-    .click-active-transparent:focus {
+    .click-active-transparent:active {
         outline: none;
         background-image:url('./images/Button Default.png');
     }
 
-    .click-noactive-transparent:focus {
+    .click-noactive-transparent:active {
         outline: none;
         background-image:url('./images/Button Hover.png');
     }
@@ -649,11 +651,12 @@ body {
         height: 2.3vw;
         width: 5.18vw;
         border: none;
+        outline: none;
         background-color: white;
         cursor: pointer;
     }
 
-    .click-noactive-text:focus {
+    .click-noactive-text:active {
       
         color: $darkshade50;
         outline: none;
@@ -663,7 +666,7 @@ body {
         color: $darkshade50;
     }
 
-    .click-active-text:focus {
+    .click-active-text:active {
         outline: none;
         color: $purple;
     }
@@ -689,7 +692,6 @@ body {
         outline: none;
     }
     
-
             //-------------------------------------------------BUTTONS
      
     
@@ -708,5 +710,45 @@ body {
         clear: both;
         margin: 3.5vw 0 0 0.5vw;
     }
+
+  //- ------------------------------------------------------------------------------------------------------------------
+
+
+                  //-------------------------------------------------EXPAND-DROPDOWN--------------------
+ .expand-dropdown {
+     width: 15vw;
+     margin: 4.4vw 0 0 7.2vw;
+ }
+
+
+[name=beds] {
+     
+        margin-top: -0.7vw;
+        @include field(); 
+        @include body(); 
+        appearance: none;
+        width: 14vw;
+        background: url('./images/expand_more-white-24dp.png') no-repeat 12vw;
+        background-size: 1.2vw;
+        text-overflow: ellipsis;
+        padding-right: 5vw;
+        [name=qbeds]:hover, :focus, :active  {
+            @include hover(); 
+     }
+    }
+
+    .default {
+        @include body;
+        margin: 0 0 0 6.5vw;
+    }
+
+    .minus {
+        border: solid 1px black;
+        border-radius: 50%;
+        width: 3vw;
+        height: 3vw;
+    }
+
   
+
 
